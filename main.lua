@@ -94,7 +94,7 @@ end
 
 function handleCmdKey(key)
     if key == 'escape' then love.event.quit()
-    elseif key == 'f12' then love.graphics.captureScreenshot(title .. '_' .. os.time() .. '.png')
+    elseif key == 'c' then love.graphics.captureScreenshot(title .. '_' .. os.time() .. '.png')
     end 
 end
 
@@ -115,7 +115,7 @@ function love.update(dt)
                 blink = not blink
             end
 
-            if #moves > 1 then
+            if #moves > 1 then 
                 table.remove(moves, 1)
             end
 
@@ -197,7 +197,7 @@ end
 
 function wallCrash(x, y)
     for _, pos in ipairs(wall) do
-        if pos.x == x and pos.y == y then 
+        if pos.x == x and pos.y == y then
             return true 
         end
     end
