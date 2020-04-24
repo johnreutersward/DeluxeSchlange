@@ -163,7 +163,7 @@ function love.update(dt)
             end
             
             table.insert(snake, 1, {x = x, y = y})
-            if score then
+            if scored then
                 updateApple()
             else
                 table.remove(snake)
